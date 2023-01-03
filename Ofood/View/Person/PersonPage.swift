@@ -15,6 +15,7 @@ struct PersonPage: View {
         NavigationView {
             ScrollView {
                 VStack {
+                    ImageLoadingView(url: personModel.imageUrl)
                     
                     Button {
                         personModel.logOut()
@@ -41,6 +42,7 @@ struct PersonPage: View {
         }
         .onAppear{
             personModel.async()
+            URLCache.shared.memoryCapacity = 1024 * 1024 * 512
         }
     }
 }

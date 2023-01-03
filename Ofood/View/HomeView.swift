@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var personModel: PersonViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TabView {
+            MainMessagesView().tabItem {
+                NavigationLink(destination: MainMessagesView()){
+                    Image(systemName: "pencil")
+                    Text("內容")
+                }
+
+            }
+            PersonPage().tabItem {
+                NavigationLink(destination: PersonPage().environmentObject(personModel)){
+                    Image(systemName: "person.fill")
+                    Text("個人資訊")
+                }
+            }
+        }
+        .onAppear {
+            personModel.async()
+        }
     }
 }
 

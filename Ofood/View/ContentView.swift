@@ -11,7 +11,7 @@ struct ContentView: View {
     @StateObject var personModel = PersonViewModel()
     var body: some View {
         if personModel.logStatus {
-            PersonPage()
+            HomeView()
                 .environmentObject(personModel)
         } else {
             LoginPage()
