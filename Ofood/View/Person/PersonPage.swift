@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct PersonPage: View {
     @EnvironmentObject var personModel: PersonViewModel
@@ -15,7 +16,11 @@ struct PersonPage: View {
         NavigationView {
             ScrollView {
                 VStack {
-                    ImageLoadingView(url: personModel.imageUrl)
+                    WebImage(url: URL(string: personModel.imageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 128, height: 128)
+                        .cornerRadius(64)
                     
                     Button {
                         personModel.logOut()

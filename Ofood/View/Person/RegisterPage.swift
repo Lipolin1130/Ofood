@@ -91,8 +91,7 @@ struct RegisterPage: View {
                             loginModel.password == "" ? Color.black.opacity(0.05) : Color.blue.opacity(0.1)
                         )
                 }
-                .padding(.vertical, 10)
-                .padding(.bottom, 10)
+                .padding([.leading, .trailing, .vertical], 10)
             
             HStack {
                 Spacer()

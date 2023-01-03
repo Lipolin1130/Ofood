@@ -9,14 +9,14 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var personModel: PersonViewModel
+    
     var body: some View {
         TabView {
             MainMessagesView().tabItem {
-                NavigationLink(destination: MainMessagesView()){
-                    Image(systemName: "pencil")
-                    Text("內容")
+                NavigationLink(destination: MainMessagesView().environmentObject(personModel)){
+                    Image(systemName: "rectangle.3.group.bubble.left.fill")
+                    Text("訂餐聊天室")
                 }
-
             }
             PersonPage().tabItem {
                 NavigationLink(destination: PersonPage().environmentObject(personModel)){

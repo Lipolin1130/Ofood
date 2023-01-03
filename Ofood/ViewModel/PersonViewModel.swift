@@ -17,6 +17,7 @@ class PersonViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var errorMsg: String = ""
     @Published var imageUrl: String = ""
+    @Published var chatRoom: [String] = []
     
     @AppStorage("log_status") var logStatus: Bool = false
     
@@ -63,7 +64,8 @@ class PersonViewModel: ObservableObject {
             self.db.collection("user").document(self.email).setData([
                 "email": self.email,
                 "name": self.name,
-                "imageUrl": changeUrl
+                "imageUrl": changeUrl,
+                "chatRoom": [],
             ])
         }
         
@@ -83,6 +85,7 @@ class PersonViewModel: ObservableObject {
                     print("imageUrl:\(document.data()?["imageUrl"] ?? "none")")
                     self.name = document.data()?["name"] as! String
                     self.imageUrl = document.data()?["imageUrl"] as! String
+                    self.chatRoom = document.data()?["chatRoom"] as! [String]
                 } else {
                     print("document is empty")
                 }

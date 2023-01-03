@@ -6,18 +6,29 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct MainMessagesView: View {
+    @EnvironmentObject var personModel: PersonViewModel
     var body: some View {
         NavigationView {
             VStack {
                 HStack(spacing: 16) {
                     
-                    Image(systemName: "person.fill")
-                        .font(.system(size: 34, weight: .heavy))
+                    WebImage(url: URL(string: personModel.imageUrl))
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 50, height: 50)
+                        .clipped()
+                        .cornerRadius(50)
+                        .overlay(RoundedRectangle(cornerRadius: 44)
+                                    .stroke(Color(.label), lineWidth: 1)
+                        )
+                        .shadow(radius: 5)
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("USERNAME")
+                        
+                        Text(personModel.name)
                             .font(.system(size: 24, weight: .bold))
                         HStack {
                             
@@ -32,12 +43,26 @@ struct MainMessagesView: View {
                     }
                     Spacer()
                     
+                    NavigationLink {
+                        CreateRoomView().environmentObject(personModel)
+                    } label: {
+                        Text("Create")
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .frame(width: 70)
+                            .background(Color("Purple"), in: Capsule())
+                            .foregroundColor(.white)
+                    }
+                    
                     Button {
                         //should show log out
                     } label: {
-                        Image(systemName: "gear")
-                            .font(.system(size: 24, weight: .bold))
-                            .foregroundColor(Color(.label))
+                        Text("Join")
+                            .fontWeight(.bold)
+                            .padding(.vertical)
+                            .frame(width: 70)
+                            .background(Color("Orange"), in: Capsule())
+                            .foregroundColor(.white)
                     }
                 }
                 .padding()
@@ -74,25 +99,11 @@ struct MainMessagesView: View {
                     .padding(.bottom, 50)
                 }
             }
-            .overlay(
-                Button {
-                    
-                } label: {
-                    HStack {
-                        Spacer()
-                        Text("+ New Message")
-                            .font(.system(size: 16, weight: .bold))
-                        Spacer()
-                    }
-                    .foregroundColor(.white)
-                    .padding(.vertical)
-                    .background(Color.blue)
-                    .cornerRadius(32)
-                    .padding(.horizontal)
-                    .shadow(radius: 15)
-                }, alignment: .bottom
-            )
             .navigationBarHidden(true)
+        }
+        .onAppear {
+            personModel.async()
+            URLCache.shared.memoryCapacity = 1024 * 1024 * 512
         }
     }
 }
