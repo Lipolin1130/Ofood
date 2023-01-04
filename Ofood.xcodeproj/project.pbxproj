@@ -29,6 +29,12 @@
 		D0515C0B2964593100B9F491 /* LocationSearchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C0A2964593100B9F491 /* LocationSearchService.swift */; };
 		D0515C0D29645A5000B9F491 /* LandMark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C0C29645A5000B9F491 /* LandMark.swift */; };
 		D0515C0F29645EE600B9F491 /* LandmarkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C0E29645EE600B9F491 /* LandmarkListView.swift */; };
+		D0515C112964925300B9F491 /* ChatRoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C102964925300B9F491 /* ChatRoomViewModel.swift */; };
+		D0515C132964A06400B9F491 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C122964A06400B9F491 /* CardView.swift */; };
+		D0515C152964A7F100B9F491 /* ChatRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C142964A7F000B9F491 /* ChatRoomView.swift */; };
+		D0515C172964A8D100B9F491 /* JoinRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C162964A8D100B9F491 /* JoinRoomView.swift */; };
+		D0515C1929650F1A00B9F491 /* QrcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C1829650F1900B9F491 /* QrcodeView.swift */; };
+		D0515C1C2965608B00B9F491 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = D0515C1B2965608B00B9F491 /* CodeScanner */; };
 		D0962E4A29637E5A0077274A /* MainMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4929637E5A0077274A /* MainMessagesView.swift */; };
 		D0962E4C296385220077274A /* MainMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4B296385220077274A /* MainMessageViewModel.swift */; };
 		D0962E4F296386E80077274A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4E296386E80077274A /* User.swift */; };
@@ -54,6 +60,11 @@
 		D0515C0A2964593100B9F491 /* LocationSearchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchService.swift; sourceTree = "<group>"; };
 		D0515C0C29645A5000B9F491 /* LandMark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandMark.swift; sourceTree = "<group>"; };
 		D0515C0E29645EE600B9F491 /* LandmarkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandmarkListView.swift; sourceTree = "<group>"; };
+		D0515C102964925300B9F491 /* ChatRoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewModel.swift; sourceTree = "<group>"; };
+		D0515C122964A06400B9F491 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		D0515C142964A7F000B9F491 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
+		D0515C162964A8D100B9F491 /* JoinRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomView.swift; sourceTree = "<group>"; };
+		D0515C1829650F1900B9F491 /* QrcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeView.swift; sourceTree = "<group>"; };
 		D0962E4929637E5A0077274A /* MainMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesView.swift; sourceTree = "<group>"; };
 		D0962E4B296385220077274A /* MainMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageViewModel.swift; sourceTree = "<group>"; };
 		D0962E4E296386E80077274A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -67,6 +78,7 @@
 			files = (
 				D0515BFF296446E100B9F491 /* SDWebImageSwiftUI in Frameworks */,
 				D03F61F9295E6E720097484B /* FirebaseDatabase in Frameworks */,
+				D0515C1C2965608B00B9F491 /* CodeScanner in Frameworks */,
 				D04C70A02963D23E00365415 /* FirebaseStorage in Frameworks */,
 				D03F61F4295E66BE0097484B /* FirebaseAuth in Frameworks */,
 				D03F61F7295E6E660097484B /* FirebaseFirestore in Frameworks */,
@@ -99,8 +111,8 @@
 				D0515C092964591D00B9F491 /* Services */,
 				D0515C042964545900B9F491 /* Manager */,
 				D0962E4D296386D70077274A /* Model */,
-				D03F61E6295E632A0097484B /* ViewModel */,
 				D03F61E5295E631F0097484B /* View */,
+				D03F61E6295E632A0097484B /* ViewModel */,
 				D03F61D7295DFAA50097484B /* ShareEatApp.swift */,
 				D03F61DB295DFAA70097484B /* Assets.xcassets */,
 				D03F61FE295E748C0097484B /* GoogleService-Info.plist */,
@@ -136,6 +148,7 @@
 				D03F61EE295E647F0097484B /* PersonViewModel.swift */,
 				D0962E4B296385220077274A /* MainMessageViewModel.swift */,
 				D0515C0229644F5D00B9F491 /* GoogleMapModel.swift */,
+				D0515C102964925300B9F491 /* ChatRoomViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -179,6 +192,10 @@
 			children = (
 				D0962E4929637E5A0077274A /* MainMessagesView.swift */,
 				D0515C0029644B6F00B9F491 /* CreateRoomView.swift */,
+				D0515C122964A06400B9F491 /* CardView.swift */,
+				D0515C142964A7F000B9F491 /* ChatRoomView.swift */,
+				D0515C162964A8D100B9F491 /* JoinRoomView.swift */,
+				D0515C1829650F1900B9F491 /* QrcodeView.swift */,
 			);
 			path = MainMessages;
 			sourceTree = "<group>";
@@ -214,6 +231,7 @@
 				D03F61F8295E6E720097484B /* FirebaseDatabase */,
 				D04C709F2963D23E00365415 /* FirebaseStorage */,
 				D0515BFE296446E100B9F491 /* SDWebImageSwiftUI */,
+				D0515C1B2965608B00B9F491 /* CodeScanner */,
 			);
 			productName = ShareEat;
 			productReference = D03F61D4295DFAA50097484B /* Ofood.app */;
@@ -246,6 +264,7 @@
 			packageReferences = (
 				D03F61F2295E66BE0097484B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D0515BFD296446E100B9F491 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				D0515C1A2965608A00B9F491 /* XCRemoteSwiftPackageReference "CodeScanner" */,
 			);
 			productRefGroup = D03F61D5295DFAA50097484B /* Products */;
 			projectDirPath = "";
@@ -279,14 +298,19 @@
 				D0962E4A29637E5A0077274A /* MainMessagesView.swift in Sources */,
 				D0515C0129644B6F00B9F491 /* CreateRoomView.swift in Sources */,
 				D0515C08296456AD00B9F491 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				D0515C172964A8D100B9F491 /* JoinRoomView.swift in Sources */,
+				D0515C112964925300B9F491 /* ChatRoomViewModel.swift in Sources */,
 				D0515C0D29645A5000B9F491 /* LandMark.swift in Sources */,
 				D0962E512963CBFE0077274A /* ImagePickerView.swift in Sources */,
 				D0515C0B2964593100B9F491 /* LocationSearchService.swift in Sources */,
+				D0515C1929650F1A00B9F491 /* QrcodeView.swift in Sources */,
 				D03F61F1295E65110097484B /* HomeView.swift in Sources */,
 				D03F61E9295E63D50097484B /* LoginPage.swift in Sources */,
+				D0515C152964A7F100B9F491 /* ChatRoomView.swift in Sources */,
 				D03F61D8295DFAA50097484B /* ShareEatApp.swift in Sources */,
 				D03F61EF295E647F0097484B /* PersonViewModel.swift in Sources */,
 				D03F61EB295E63F40097484B /* RegisterPage.swift in Sources */,
+				D0515C132964A06400B9F491 /* CardView.swift in Sources */,
 				D0515C062964547000B9F491 /* LocationManager.swift in Sources */,
 				D0515C0329644F5D00B9F491 /* GoogleMapModel.swift in Sources */,
 				D0962E4F296386E80077274A /* User.swift in Sources */,
@@ -423,6 +447,7 @@
 				DEVELOPMENT_TEAM = F2X8LZ547C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -455,6 +480,7 @@
 				DEVELOPMENT_TEAM = F2X8LZ547C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -516,6 +542,14 @@
 				kind = branch;
 			};
 		};
+		D0515C1A2965608A00B9F491 /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -543,6 +577,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D0515BFD296446E100B9F491 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		D0515C1B2965608B00B9F491 /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0515C1A2965608A00B9F491 /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

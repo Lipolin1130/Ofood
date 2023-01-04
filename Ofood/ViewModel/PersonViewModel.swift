@@ -58,7 +58,7 @@ class PersonViewModel: ObservableObject {
         }
     }
     
-    func register(uploadImage: UIImage)async throws {
+    func register(uploadImage: UIImage) async throws {
         persistImageToStorage(image: uploadImage) { changeUrl in
             self.imageUrl = changeUrl
             self.db.collection("user").document(self.email).setData([
@@ -79,6 +79,10 @@ class PersonViewModel: ObservableObject {
                 print(user.email ?? "error email")
                 self.email = user.email ?? "error email"
             }
+            
+            if self.email == "" {
+                return
+            }
             self.db.collection("user").document(self.email).getDocument{(document, error) in
                 if let document = document {
                     print("Cached document data: \(document.data()?["name"] ?? "none")")
@@ -91,5 +95,19 @@ class PersonViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func joinRoom(key: String) {
+        let doc = db.collection("user").document(self.email)
+        
+        if !self.chatRoom.contains(key) {
+            doc.updateData([
+                "chatRoom": FieldValue.arrayUnion([key])
+            ])
+            db.collection("chatRooms").document(key).updateData([
+                "groupPeople": FieldValue.arrayUnion([self.email])
+            ])
+        }
+        
     }
 }

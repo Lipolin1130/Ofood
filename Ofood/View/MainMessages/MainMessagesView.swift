@@ -10,6 +10,9 @@ import SDWebImageSwiftUI
 
 struct MainMessagesView: View {
     @EnvironmentObject var personModel: PersonViewModel
+    @State var showCreateRoom = false
+    @State var showJoinRoom = false
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -43,9 +46,7 @@ struct MainMessagesView: View {
                     }
                     Spacer()
                     
-                    NavigationLink {
-                        CreateRoomView().environmentObject(personModel)
-                    } label: {
+                    NavigationLink(destination: CreateRoomView(showCreateRoom: $showCreateRoom).environmentObject(personModel), isActive: $showCreateRoom) {
                         Text("Create")
                             .fontWeight(.bold)
                             .padding(.vertical)
@@ -54,9 +55,7 @@ struct MainMessagesView: View {
                             .foregroundColor(.white)
                     }
                     
-                    Button {
-                        //should show log out
-                    } label: {
+                    NavigationLink(destination: JoinRoomView(showJoinRoom: $showJoinRoom).environmentObject(personModel), isActive: $showJoinRoom) {
                         Text("Join")
                             .fontWeight(.bold)
                             .padding(.vertical)
@@ -68,34 +67,11 @@ struct MainMessagesView: View {
                 .padding()
                 
                 ScrollView {
-                    ForEach(0..<10, id: \.self) { num in
-                        VStack {
-                            
-                            HStack {
-                                Image(systemName: "person.fill")
-                                    .font(.system(size: 32))
-                                    .padding(8)
-                                    .overlay(
-                                        RoundedRectangle(cornerRadius: 44)
-                                            .stroke(Color.black, lineWidth: 1)
-                                    )
-                                
-                                VStack(alignment: .leading) {
-                                    Text("UserName")
-                                        .font(.system(size: 16, weight: .bold))
-                                    Text("Message sent to user")
-                                        .font(.system(size: 14))
-                                        .foregroundColor(Color(.lightGray))
-                                }
-                                Spacer()
-                                Text("22d")
-                                    .font(.system(size: 14, weight: .semibold))
-                            }
-                            Divider()
-                                .padding(.vertical, 8)
-                        }
-                        .padding(.horizontal)
+                    ForEach(personModel.chatRoom, id: \.self) { room in
+                        CardView(chatRoomId: room)
+                            .environmentObject(personModel)
                     }
+                    
                     .padding(.bottom, 50)
                 }
             }

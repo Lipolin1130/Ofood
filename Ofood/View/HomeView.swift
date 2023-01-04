@@ -15,7 +15,7 @@ struct HomeView: View {
             MainMessagesView().tabItem {
                 NavigationLink(destination: MainMessagesView().environmentObject(personModel)){
                     Image(systemName: "rectangle.3.group.bubble.left.fill")
-                    Text("訂餐聊天室")
+                    Text("訂餐群組")
                 }
             }
             PersonPage().tabItem {
@@ -24,9 +24,6 @@ struct HomeView: View {
                     Text("個人資訊")
                 }
             }
-        }
-        .onAppear {
-            personModel.async()
         }
     }
 }
