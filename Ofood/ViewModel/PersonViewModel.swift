@@ -99,7 +99,6 @@ class PersonViewModel: ObservableObject {
     
     func joinRoom(key: String) {
         let doc = db.collection("user").document(self.email)
-        
         if !self.chatRoom.contains(key) {
             doc.updateData([
                 "chatRoom": FieldValue.arrayUnion([key])

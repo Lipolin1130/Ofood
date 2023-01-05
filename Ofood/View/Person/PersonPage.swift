@@ -14,13 +14,17 @@ struct PersonPage: View {
     
     var body: some View {
         NavigationView {
-            ScrollView {
+            ZStack {
+                Color.brown.opacity(0.2).ignoresSafeArea(.all)
                 VStack {
+                    
                     WebImage(url: URL(string: personModel.imageUrl))
                         .resizable()
                         .scaledToFill()
                         .frame(width: 128, height: 128)
                         .cornerRadius(64)
+                    
+                    Spacer()
                     
                     Button {
                         personModel.logOut()
@@ -37,12 +41,9 @@ struct PersonPage: View {
                                     .stroke(Color.blue, lineWidth: 3)
                             )
                     }
-                    .padding(.bottom, 20)
-
                 }
                 .padding()
             }
-            .background(Color.black.opacity(0.05).ignoresSafeArea())
             .navigationBarTitle("Hello, \(personModel.name)")
         }
         .onAppear{

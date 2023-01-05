@@ -17,6 +17,7 @@ class ChatRoomViewModel: ObservableObject {
     @Published var restaurant: String = ""
     @Published var key:String = UUID().uuidString
     @Published var food: [String] = []
+    @Published var foodItem: [Food] = []
     
     let db = Firestore.firestore()
     
@@ -30,6 +31,22 @@ class ChatRoomViewModel: ObservableObject {
                 self.groupPeople = document["groupPeople"] as? [String] ?? []
                 self.restaurant = document["restaurant"] as? String ?? ""
                 self.food = document["food"] as? [String] ?? []
+            }
+        }
+        
+        for foodId in food {
+            self.db.collection("food").document(foodId).getDocument { (document, error) in
+                if let document = document, document.exists {
+                    let creater = document["creater"] as? String ?? ""
+                    let count = document["count"] as? Int ?? 0
+                    let foodId = document["foodId"] as? String ?? ""
+                    let foodName = document["foodName"] as? String ?? ""
+                    let roomId = document["roomId"] as? String ?? ""
+                    
+                    if !self.foodItem.contains(Food(foodName: foodName, count: count, creater: creater, foodId: foodId, roomId: roomId)) {
+                        self.foodItem.append(Food(foodName: foodName, count: count, creater: creater, foodId: foodId, roomId: roomId))
+                    }
+                }
             }
         }
     }

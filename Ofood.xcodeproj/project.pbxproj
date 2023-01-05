@@ -35,10 +35,14 @@
 		D0515C172964A8D100B9F491 /* JoinRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C162964A8D100B9F491 /* JoinRoomView.swift */; };
 		D0515C1929650F1A00B9F491 /* QrcodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C1829650F1900B9F491 /* QrcodeView.swift */; };
 		D0515C1C2965608B00B9F491 /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = D0515C1B2965608B00B9F491 /* CodeScanner */; };
+		D0515C2129658A3000B9F491 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C2029658A3000B9F491 /* Food.swift */; };
+		D0515C232965A03000B9F491 /* AddFood.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0515C222965A02F00B9F491 /* AddFood.swift */; };
+		D0515C262965B68700B9F491 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = D0515C252965B68700B9F491 /* SocketIO */; };
 		D0962E4A29637E5A0077274A /* MainMessagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4929637E5A0077274A /* MainMessagesView.swift */; };
-		D0962E4C296385220077274A /* MainMessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4B296385220077274A /* MainMessageViewModel.swift */; };
 		D0962E4F296386E80077274A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E4E296386E80077274A /* User.swift */; };
 		D0962E512963CBFE0077274A /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0962E502963CBFE0077274A /* ImagePickerView.swift */; };
+		D0B3690C2966B4FA0067F6E0 /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B3690B2966B4FA0067F6E0 /* FoodListView.swift */; };
+		D0DCC19D2965BB14001CBC1A /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DCC19C2965BB14001CBC1A /* SocketService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,10 +69,14 @@
 		D0515C142964A7F000B9F491 /* ChatRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomView.swift; sourceTree = "<group>"; };
 		D0515C162964A8D100B9F491 /* JoinRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinRoomView.swift; sourceTree = "<group>"; };
 		D0515C1829650F1900B9F491 /* QrcodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcodeView.swift; sourceTree = "<group>"; };
+		D0515C2029658A3000B9F491 /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		D0515C222965A02F00B9F491 /* AddFood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddFood.swift; sourceTree = "<group>"; };
 		D0962E4929637E5A0077274A /* MainMessagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessagesView.swift; sourceTree = "<group>"; };
-		D0962E4B296385220077274A /* MainMessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMessageViewModel.swift; sourceTree = "<group>"; };
 		D0962E4E296386E80077274A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D0962E502963CBFE0077274A /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		D0B3690B2966B4FA0067F6E0 /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
+		D0DCC19C2965BB14001CBC1A /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		D0DCC19E2965C0AE001CBC1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,7 @@
 			files = (
 				D0515BFF296446E100B9F491 /* SDWebImageSwiftUI in Frameworks */,
 				D03F61F9295E6E720097484B /* FirebaseDatabase in Frameworks */,
+				D0515C262965B68700B9F491 /* SocketIO in Frameworks */,
 				D0515C1C2965608B00B9F491 /* CodeScanner in Frameworks */,
 				D04C70A02963D23E00365415 /* FirebaseStorage in Frameworks */,
 				D03F61F4295E66BE0097484B /* FirebaseAuth in Frameworks */,
@@ -108,6 +117,7 @@
 		D03F61D6295DFAA50097484B /* Ofood */ = {
 			isa = PBXGroup;
 			children = (
+				D0DCC19E2965C0AE001CBC1A /* Info.plist */,
 				D0515C092964591D00B9F491 /* Services */,
 				D0515C042964545900B9F491 /* Manager */,
 				D0962E4D296386D70077274A /* Model */,
@@ -132,6 +142,7 @@
 		D03F61E5295E631F0097484B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D0515C1F296588D000B9F491 /* QRcode */,
 				D0962E4829637E2B0077274A /* MainMessages */,
 				D03F61E7295E639E0097484B /* Person */,
 				D03F61F0295E65110097484B /* HomeView.swift */,
@@ -146,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				D03F61EE295E647F0097484B /* PersonViewModel.swift */,
-				D0962E4B296385220077274A /* MainMessageViewModel.swift */,
 				D0515C0229644F5D00B9F491 /* GoogleMapModel.swift */,
 				D0515C102964925300B9F491 /* ChatRoomViewModel.swift */,
 			);
@@ -183,8 +193,17 @@
 			isa = PBXGroup;
 			children = (
 				D0515C0A2964593100B9F491 /* LocationSearchService.swift */,
+				D0DCC19C2965BB14001CBC1A /* SocketService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		D0515C1F296588D000B9F491 /* QRcode */ = {
+			isa = PBXGroup;
+			children = (
+				D0515C1829650F1900B9F491 /* QrcodeView.swift */,
+			);
+			name = QRcode;
 			sourceTree = "<group>";
 		};
 		D0962E4829637E2B0077274A /* MainMessages */ = {
@@ -195,7 +214,8 @@
 				D0515C122964A06400B9F491 /* CardView.swift */,
 				D0515C142964A7F000B9F491 /* ChatRoomView.swift */,
 				D0515C162964A8D100B9F491 /* JoinRoomView.swift */,
-				D0515C1829650F1900B9F491 /* QrcodeView.swift */,
+				D0515C222965A02F00B9F491 /* AddFood.swift */,
+				D0B3690B2966B4FA0067F6E0 /* FoodListView.swift */,
 			);
 			path = MainMessages;
 			sourceTree = "<group>";
@@ -205,6 +225,7 @@
 			children = (
 				D0962E4E296386E80077274A /* User.swift */,
 				D0515C0C29645A5000B9F491 /* LandMark.swift */,
+				D0515C2029658A3000B9F491 /* Food.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +253,7 @@
 				D04C709F2963D23E00365415 /* FirebaseStorage */,
 				D0515BFE296446E100B9F491 /* SDWebImageSwiftUI */,
 				D0515C1B2965608B00B9F491 /* CodeScanner */,
+				D0515C252965B68700B9F491 /* SocketIO */,
 			);
 			productName = ShareEat;
 			productReference = D03F61D4295DFAA50097484B /* Ofood.app */;
@@ -265,6 +287,7 @@
 				D03F61F2295E66BE0097484B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				D0515BFD296446E100B9F491 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				D0515C1A2965608A00B9F491 /* XCRemoteSwiftPackageReference "CodeScanner" */,
+				D0515C242965B68700B9F491 /* XCRemoteSwiftPackageReference "socket" */,
 			);
 			productRefGroup = D03F61D5295DFAA50097484B /* Products */;
 			projectDirPath = "";
@@ -293,11 +316,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0962E4C296385220077274A /* MainMessageViewModel.swift in Sources */,
 				D03F61DA295DFAA50097484B /* ContentView.swift in Sources */,
+				D0515C232965A03000B9F491 /* AddFood.swift in Sources */,
 				D0962E4A29637E5A0077274A /* MainMessagesView.swift in Sources */,
 				D0515C0129644B6F00B9F491 /* CreateRoomView.swift in Sources */,
 				D0515C08296456AD00B9F491 /* MKCoordinateRegion+Extensions.swift in Sources */,
+				D0DCC19D2965BB14001CBC1A /* SocketService.swift in Sources */,
 				D0515C172964A8D100B9F491 /* JoinRoomView.swift in Sources */,
 				D0515C112964925300B9F491 /* ChatRoomViewModel.swift in Sources */,
 				D0515C0D29645A5000B9F491 /* LandMark.swift in Sources */,
@@ -313,6 +337,8 @@
 				D0515C132964A06400B9F491 /* CardView.swift in Sources */,
 				D0515C062964547000B9F491 /* LocationManager.swift in Sources */,
 				D0515C0329644F5D00B9F491 /* GoogleMapModel.swift in Sources */,
+				D0515C2129658A3000B9F491 /* Food.swift in Sources */,
+				D0B3690C2966B4FA0067F6E0 /* FoodListView.swift in Sources */,
 				D0962E4F296386E80077274A /* User.swift in Sources */,
 				D0515C0F29645EE600B9F491 /* LandmarkListView.swift in Sources */,
 				D03F61ED295E641A0097484B /* PersonPage.swift in Sources */,
@@ -447,6 +473,7 @@
 				DEVELOPMENT_TEAM = F2X8LZ547C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ofood/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
@@ -480,6 +507,7 @@
 				DEVELOPMENT_TEAM = F2X8LZ547C;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Ofood/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need to scan QR codes.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "This app requires your location";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires your location";
@@ -550,6 +578,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		D0515C242965B68700B9F491 /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -582,6 +618,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = D0515C1A2965608A00B9F491 /* XCRemoteSwiftPackageReference "CodeScanner" */;
 			productName = CodeScanner;
+		};
+		D0515C252965B68700B9F491 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D0515C242965B68700B9F491 /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

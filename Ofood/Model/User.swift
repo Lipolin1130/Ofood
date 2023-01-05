@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct User {
-    let name: String
-    let email: String
-    let profileImageUrl: String
+    var name: String
+    var email: String
+    var profileImageUrl: String
 }
